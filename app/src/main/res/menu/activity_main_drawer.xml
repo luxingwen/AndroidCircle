@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camara"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="Import" />
+        <item
+            android:id="@+id/nav_gank"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="Gank" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@android:drawable/ic_menu_slideshow"
+            android:title="message" />
+        <item
+            android:id="@+id/nav_robot"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="甩甩" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="about" />
+            <item
+                android:id="@+id/nav_blog"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="blog" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:padding="16dp">
+
+    <com.luxin.view.WrapGridViews
+        android:id="@+id/lxw_id_item_helps_gridview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="4dp"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:focusable="false"
+        android:verticalSpacing="4dp"></com.luxin.view.WrapGridViews>
+
+    <ImageView
+        android:id="@+id/lxw_id_item_helps_content_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:focusable="false"
+        android:visibility="gone" />
+</FrameLayout>

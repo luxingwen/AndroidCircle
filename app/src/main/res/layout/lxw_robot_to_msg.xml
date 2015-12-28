@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:gravity="right"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lxw_id_robot_to_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lxw_robot_chatto_msg_bg"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="luxin" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/lxw_id_robot_to_userimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/shuaishuai" />
+
+    </LinearLayout>
+</LinearLayout>

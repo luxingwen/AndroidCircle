@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择您的排位分段"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/api_id_spinner_one"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:spinnerMode="dialog"
+        android:entries="@array/data"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择你喜欢的英雄"
+        android:textSize="20sp"
+        />
+    <Spinner
+        android:id="@+id/api_id_spinner_two"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        ></Spinner>
+
+</LinearLayout>

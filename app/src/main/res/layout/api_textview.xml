@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/paleturquoise">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:text="luxin"
+                    android:textColor="@color/red"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/lightblue">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:shadowColor="@color/orange"
+                    android:shadowDx="10.0"
+                    android:shadowDy="10.0"
+                    android:shadowRadius="3.0"
+                    android:text="带阴影的TextView"
+                    android:textColor="@color/turquoise"
+                    android:textSize="30sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/cadetblue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/api_textview_rectangle"
+                    android:gravity="center"
+                    android:text="矩形边框的TextView"
+                    android:textColor="@color/chartreuse"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/api_textview_fillet"
+                    android:gravity="center"
+                    android:text="圆角边框的TextView"
+                    android:textColor="@color/slateblue"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@drawable/github"
+                    android:text="Github"
+                    android:gravity="center"
+                    android:textSize="32sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择你喜欢玩的位置"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/api_id_checkbox_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:text="上单" />
+    <CheckBox
+        android:id="@+id/api_id_checkbox_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:text="中单" />
+
+    <CheckBox
+        android:id="@+id/api_id_checkbox_daye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:text="打野" />
+
+    <CheckBox
+        android:id="@+id/api_id_checkbox_auxiliary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:text="辅助" />
+
+    <CheckBox
+        android:id="@+id/api_id_checkbox_adc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:text="ADC" />
+    <CheckBox
+        android:id="@+id/api_id_checkbox_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:text="All" />
+    <Button
+        android:id="@+id/api_id_checkbox_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_submit"
+        />
+</LinearLayout>

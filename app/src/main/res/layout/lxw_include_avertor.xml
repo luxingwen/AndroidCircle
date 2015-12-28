@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/lxw_id_item_helps_userimg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/github" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/lxw_id_item_helps_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="luxin"
+            android:textColor="#232323"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/lxw_id_item_helps_user_personality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="我就是甩甩，哈哈哈"
+            android:textColor="#565656"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/lxw_id_item_helps_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="5秒前"
+            android:textColor="#565656"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</LinearLayout>

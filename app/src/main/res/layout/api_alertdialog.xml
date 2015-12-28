@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/api_id_alertdialog_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建一个普通的dialog"
+        android:onClick="one"
+        />
+    <Button
+        android:id="@+id/api_id_alertdialog_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示一个带普通列表的dialog"
+        android:onClick="two"
+        />
+
+    <Button
+        android:id="@+id/api_id_alertdialog_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示一个带单选列表的dialog"
+        android:onClick="three"
+        />
+    <Button
+        android:id="@+id/api_id_alertdialog_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示一个带复选列表的dialog"
+        android:onClick="four"
+        />
+
+    <Button
+        android:id="@+id/api_id_alertdialog_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示一个自定义的dialog"
+        android:onClick="five"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/api_id_alertdialog_six"
+        android:onClick="six"
+        android:text="水平进度条dialog"
+        />
+</LinearLayout>

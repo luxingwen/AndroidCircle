@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/lxw_id_item_helps_include_avertor"
+            layout="@layout/lxw_include_avertor" />
+
+        <TextView
+            android:id="@+id/lxw_id_item_helps_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:padding="16dp"
+            android:text="我是甩甩，这是内容好不好好啊？我要发大招拉。哈哈哈哈,真的是醉了哈."
+            android:textColor="#232323"
+            android:textSize="14sp" />
+
+        <include
+            android:id="@+id/lxw_id_item_helps_include_img"
+            layout="@layout/lxw_item_helps_image" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

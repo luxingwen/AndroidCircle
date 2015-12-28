@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Android Circle</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+
+
+    <string name="btn_submit">提交</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">登陆</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <string name="lxw_about">
+   我是甩甩，这个项目本来是我的一个期末作业，现在开源出来给大家学习，我表示会一直把这个项目维护下去，把我在学习Android过程中一些有趣的列子都往这个项目里面加。现在的apidemo都出自code-pig的blog，个人认为写得确实不错，可以去看看。
+\n我在学校还创建了开源社区，地址是http://biggerforum.org，目前人气不怎么样。如果你觉得它确实有存在的意思，不妨来给BiggerForum添加一点活跃度。
+    </string>
+</resources>
