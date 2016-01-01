@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luxin.view.TouchImageView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/lxw_id_item_meizi_viewpager_img"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+</com.luxin.view.TouchImageView>

@@ -12,7 +12,5 @@ public interface Constant {
     public final static String ACTION_REGISTER_SUCCESS_FINISH="register.success.finish";//注册成功之后登陆页面退出
 
     public final static String BLOG="http://luxin.gitcafe.io";
-
-
     public final static String TULING_KEY="";
 }

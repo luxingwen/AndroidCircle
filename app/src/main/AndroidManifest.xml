@@ -78,9 +78,9 @@
             android:name=".GankIoActivity"
             android:label="gank.io"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MeiziActivity"
-            android:label="Meizi"
-            />
+        <activity
+            android:name=".MeiziActivity"
+            android:label="Meizi" />
 
         <!--Api Demo  start -->
         <activity
@@ -110,6 +110,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.api.ui.ApiAlertDialog" />
         <activity android:name="com.api.ui.ApiFragment" />
+        <activity
+            android:name=".MeiziViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!--Api Demo  end -->
 

@@ -4,13 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/lxw_id_meizi_gridview"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/lxw_id_meizi_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:padding="2dp"
-        android:scrollbarStyle="outsideOverlay"
-        android:scrollbars="vertical"
-         />
+        />
 </LinearLayout>
