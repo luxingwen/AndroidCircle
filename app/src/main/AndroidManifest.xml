@@ -24,8 +24,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -65,7 +64,7 @@
         <activity
             android:name="com.luxin.about.AboutActivity"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MessageActivity"
             android:label="message"
@@ -79,6 +78,9 @@
             android:name=".GankIoActivity"
             android:label="gank.io"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".MeiziActivity"
+            android:label="Meizi"
+            />
 
         <!--Api Demo  start -->
         <activity
@@ -107,6 +109,7 @@
             android:name="com.api.ui.ApiViewFlipper"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.api.ui.ApiAlertDialog" />
+        <activity android:name="com.api.ui.ApiFragment" />
 
         <!--Api Demo  end -->
 

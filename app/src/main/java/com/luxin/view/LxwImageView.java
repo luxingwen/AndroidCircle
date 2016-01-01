@@ -292,13 +292,13 @@ public class LxwImageView extends ImageView implements ViewTreeObserver.OnGlobal
 
             case MotionEvent.ACTION_DOWN:
                 if (rectFs.width() > getWidth() + 0.01 || rectFs.height() > getHeight() + 0.01) {
-                    if (getParent() instanceof ViewPager)
+                   // if (getParent() instanceof ViewPager)
                         getParent().requestDisallowInterceptTouchEvent(true);
-
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-                if (rectFs.width() > getWidth() + 0.01 || rectFs.height() > getHeight() + 0.01) {
+                RectF rectFss = getMatrixRectF();
+                if (rectFss.width() > getWidth() + 0.01 || rectFss.height() > getHeight() + 0.01) {
                     if (getParent() instanceof ViewPager)
                         getParent().requestDisallowInterceptTouchEvent(true);
 

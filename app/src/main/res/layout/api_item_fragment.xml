@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/api_login_guide_bg"
-    tools:context=".SplashActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/lxw_id_splash_img"
+    <TextView
+        android:id="@+id/api_id_item_fragment_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/api_guide_1" />
+        android:gravity="center"
+        android:text="呵呵"
+        android:textColor="@color/api_text_yellow"
+        android:textSize="20sp" />
 </LinearLayout>

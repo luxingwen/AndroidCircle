@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/api_login_guide_bg"
-    tools:context=".SplashActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/lxw_id_splash_img"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lxw_id_meizi_gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/api_guide_1" />
+         />
 </LinearLayout>

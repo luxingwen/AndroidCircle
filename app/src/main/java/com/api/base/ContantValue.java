@@ -7,7 +7,7 @@ package com.api.base;
 public interface ContantValue {
     String[] viewItem = {"LinearLayout", "RelativeLayout", "TableLayout", "GradLayout", "FrameLayout", "TextView", "EditText",
             "Button", "RadioButton", "CheckBox", "Switch ANd ToggleButton", "ProgressBar", "SeekBar", "RatingBar", "DatePicker",
-            "Notifacation","Spinner","ExpandableListView","ViewFlipper","AlertDialog"
+            "Notifacation","Spinner","ExpandableListView","ViewFlipper","AlertDialog","Fragment"
     };
 
     String[] mainItem = {"布局"};

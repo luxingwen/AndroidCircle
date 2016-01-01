@@ -180,7 +180,7 @@ public class ChoseImgActivity extends AppCompatActivity {
             public void run() {
                 Uri url = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
                 ContentResolver cr = ChoseImgActivity.this.getContentResolver();
-               Cursor cursor= cr.query(url, null, MediaStore.Images.Media.MIME_TYPE + "=? or " + MediaStore.Images.Media.MIME_TYPE + "=?", new String[]{"image/jpeg", "image/png"}, MediaStore.Images.Media.DATE_MODIFIED);
+               Cursor cursor= cr.query(url, null, MediaStore.Images.Media.MIME_TYPE + "=? or " + MediaStore.Images.Media.MIME_TYPE + "=?", new String[]{"image/jpeg", "image/png"}, MediaStore.Images.Media.DATE_MODIFIED+" desc");
                 Set<String> mDirPath=new HashSet<String>();
                 while(cursor.moveToNext()){
                     String path=cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));

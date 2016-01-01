@@ -76,6 +76,8 @@ public class ViewGroupActivity extends AppCompatActivity implements AdapterView.
                 break;
             case 19:startIntent(ApiAlertDialog.class);
                 break;
+            case 20:startIntent(ApiFragment.class);
+                break;
 
         }
     }

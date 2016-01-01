@@ -288,4 +288,8 @@
 
     <color name="bbutton_danger">#ffd9534f</color>
     <color name="text_font_white">#FFFFFF</color>
+
+
+    <color name="api_text_gray">#8D7A71</color>
+    <color name="api_text_yellow">#FFC800</color>
 </resources>

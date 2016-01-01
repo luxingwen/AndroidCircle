@@ -49,7 +49,7 @@ public class LookImgAdapter extends PagerAdapter {
             ImageView imageView=myImageViews.imageView;
             String path=myImageViews.path;
             progressBar.setVisibility(View.GONE);
-            ImageLoader.getInstance(2, ImageLoader.Type.LIFO).loaderImage(path, imageView, true);
+            ImageLoader.getInstance(2, ImageLoader.Type.FIFO).loaderImage(path, imageView, true);
 
         }
     };

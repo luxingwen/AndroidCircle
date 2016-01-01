@@ -34,6 +34,7 @@ import com.luxin.bean.MyUser;
 import com.luxin.util.Constant;
 import com.luxin.util.ImageLoader;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -283,6 +284,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camara) {
+            Intent intent=new Intent(this,MeiziActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gank) {
             Intent intent = new Intent(MainActivity.this, GankIoActivity.class);
             startActivity(intent);
