@@ -41,25 +41,34 @@ import java.util.concurrent.ExecutionException;
  * Created by luxin on 16-1-1.
  */
 public class MeiziActivity extends AppCompatActivity {
-    private static String url = "http://gank.avosapps.com/api/data/%E7%A6%8F%E5%88%A9/20/1";
+    private static String url = "http://gank.avosapps.com/api/data/%E7%A6%8F%E5%88%A9/20/";
     private String TAG = "MeiziActivity";
 
     private MeiziAdapter adapter;
     private RecyclerView recyclerView;
 
-    public static List<Meizi> mDatas=new ArrayList<Meizi>();
+    public static List<Meizi> mDatas = new ArrayList<Meizi>();
 
     private ProgressDialog progressDialog;
+
+    private StaggeredGridLayoutManager layoutManager;
+
+
+    private int page;
+
+    private boolean isre=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lxw_meizi);
-        progressDialog=ProgressDialog.show(this,null,"美女正在来的路上，请等待...");
+        page = 1;
+        progressDialog = ProgressDialog.show(this, null, "美女正在来的路上，请等待...");
         initView();
         new Thread() {
             @Override
             public void run() {
-                String result = getData();
+                String result = getData(page);
                 toMeizi(result);
                 mHandler.sendEmptyMessage(0x111);
             }
@@ -67,21 +76,53 @@ public class MeiziActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView = (RecyclerView) findViewById(R.id.lxw_id_meizi_gridview);
         adapter = new MeiziAdapter(this, mDatas);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        MeiziSpeceItemDecoration speceItemDecoration=new MeiziSpeceItemDecoration(8);
+        recyclerView.setLayoutManager(layoutManager);
+        MeiziSpeceItemDecoration speceItemDecoration = new MeiziSpeceItemDecoration(8);
         recyclerView.addItemDecoration(speceItemDecoration);
         recyclerView.setAdapter(adapter);
         adapter.setmOnItemClickListener(new MeiziAdapter.OnItemClickListener() {
             @Override
             public void OnItemClick(View view, int position) {
                 ToastUtil.show(MeiziActivity.this, "妹子" + position, Toast.LENGTH_SHORT);
-                Intent intent=new Intent(MeiziActivity.this,MeiziViewActivity.class);
-                intent.putExtra("pos",position);
+                Intent intent = new Intent(MeiziActivity.this, MeiziViewActivity.class);
+                intent.putExtra("pos", position);
                 startActivity(intent);
             }
         });
+
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    onScorlled();
+                }
+            }
+        });
+    }
+
+    private void onScorlled() {
+
+        int pos[] = new int[layoutManager.getSpanCount()];
+        layoutManager.findLastVisibleItemPositions(pos);
+
+        for (int position : pos) {
+            if (position == layoutManager.getItemCount() - 1) {
+                page++;
+                Log.e(TAG, "-----last item");
+                progressDialog.show();
+                new Thread() {
+                    @Override
+                    public void run() {
+                        String result = getData(page);
+                        toMeizi(result);
+                        mHandler.sendEmptyMessage(0x111);
+                    }
+                }.start();
+            }
+        }
     }
 
 
@@ -105,7 +146,7 @@ public class MeiziActivity extends AppCompatActivity {
 
                 Log.e(TAG, "----url---" + jsonObject.getString("url"));
                 meizi.setUrl(jsonObject.getString("url"));
-                Bitmap bitmap=getMeiziBitmap(meizi.getUrl());
+                Bitmap bitmap = getMeiziBitmap(meizi.getUrl());
                 meizi.setWidth(bitmap.getWidth());
                 meizi.setHeight(bitmap.getHeight());
                 mDatas.add(meizi);
@@ -117,9 +158,9 @@ public class MeiziActivity extends AppCompatActivity {
     }
 
     private Bitmap getMeiziBitmap(String url) {
-        Bitmap bitmap=null;
+        Bitmap bitmap = null;
         try {
-          bitmap= Glide.with(this).load(url).asBitmap().into(Target.SIZE_ORIGINAL,Target.SIZE_ORIGINAL).get();
+            bitmap = Glide.with(this).load(url).asBitmap().into(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -129,12 +170,12 @@ public class MeiziActivity extends AppCompatActivity {
     }
 
 
-    public String getData() {
+    public String getData(int page) {
         InputStream is = null;
         ByteArrayOutputStream byos = null;
         String result = "";
         try {
-            URL u = new URL(url);
+            URL u = new URL(url + page);
             HttpURLConnection conn = (HttpURLConnection) u.openConnection();
             conn.setRequestMethod("GET");
             conn.setConnectTimeout(5 * 1000);
@@ -172,4 +213,29 @@ public class MeiziActivity extends AppCompatActivity {
         }
         return result;
     }
+
+//    @Override
+//    protected void onRestart() {
+//        super.onRestart();
+//        if (!MeiziViewActivity.isRefresh) {
+//            page = 1;
+//            mDatas.clear();
+//            new Thread() {
+//                @Override
+//                public void run() {
+//                    String result = getData(page);
+//                    toMeizi(result);
+//                    mHandler.sendEmptyMessage(0x111);
+//                }
+//            }.start();
+//        }
+//
+//    }
+//
+//
+//        @Override
+//    protected void onResume() {
+//        super.onResume();
+//
+//    }
 }

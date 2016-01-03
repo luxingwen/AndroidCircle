@@ -25,10 +25,13 @@ public class MeiziViewActivity extends AppCompatActivity {
 
     private MyPagerAdapter adapter;
 
+    public static boolean isRefresh=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lxw_meizi_viewpager);
+        isRefresh=true;
         supportPostponeEnterTransition();
         mDatas = MeiziActivity.mDatas;
         Log.e(TAG, "----mDatas---" + mDatas.size());

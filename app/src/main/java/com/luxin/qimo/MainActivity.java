@@ -161,6 +161,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
         listView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -283,7 +284,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camara) {
+        if (id == R.id.nav_meizi) {
             Intent intent=new Intent(this,MeiziActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_gank) {

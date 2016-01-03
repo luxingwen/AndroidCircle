@@ -1,5 +1,6 @@
 package com.luxin.fragment;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -59,6 +60,16 @@ public class MeiziViewFragment extends Fragment  implements RequestListener<Stri
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         imageView= (TouchImageView) view.findViewById(R.id.lxw_id_item_meizi_viewpager_img);
         ViewCompat.setTransitionName(imageView,url);
+        imageView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                AlertDialog.Builder builder=new AlertDialog.Builder(activity);
+                AlertDialog alert=builder.setMessage("what are you fuck doing?")
+                                   .create();
+                alert.show();
+                return true;
+            }
+        });
     }
 
     @Override
