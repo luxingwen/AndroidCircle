@@ -29,6 +29,9 @@ import java.util.concurrent.Semaphore;
 /**
  * Created by luxin on 15-12-10.
  *  http://luxin.gitcafe.io
+ *  观看鸿阳大神视频造的轮子
+ *  http://www.imooc.com/learn/489 有兴趣可以去看看，
+ *
  */
 public class ImageLoader {
 

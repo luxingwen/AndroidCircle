@@ -13,7 +13,7 @@
 最近可能不会有任何提交，因为我要复习期末考试了。争取不挂科哈，回家好好过年。
 
 ## 如何让项目运行
-此项目是基于bmob开发，希望大家可以到www.bmob.cn上申请账号，新建新的账号，然后把key替换上。
+此项目是基于bmob开发，希望大家可以到www.bmob.cn上申请账号，新建新的项目，然后把key替换上。
 里面有一个聊天的机器人，这个也是需要自己到图灵机器人上注册账号，把key填写上，它才能得以正常工作。
 
 项目有推送功能，这个也需要自己到Bmob上的应用面板上把推送功能打开才能保证这个功能正常使用。
@@ -26,7 +26,8 @@
 ![](image/apidemo1.png)
 
 ## 感谢
-* 鸿洋大牛的blog，可以去看看他写的http://blog.csdn.net/lmj623565791/article/details/39474553
+* 鸿洋大牛的blog: http://blog.csdn.net/lmj623565791
 * 头像裁剪库：https://github.com/jdamcd/android-crop
 * 圆形头像：https://github.com/hdodenhof/CircleImageView
 * 下拉刷新上拉加载：https://github.com/android-cjj/Android-MaterialRefreshLayout
+* Glide: https://github.com/bumptech/glide

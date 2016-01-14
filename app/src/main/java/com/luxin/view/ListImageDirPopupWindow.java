@@ -20,6 +20,8 @@ import java.util.List;
 /**
  * Created by luxin on 15-12-10.
  *  http://luxin.gitcafe.io
+ *  观看鸿阳大神视频
+ *  http://www.imooc.com/learn/489
  */
 public class ListImageDirPopupWindow extends PopupWindow {
 
