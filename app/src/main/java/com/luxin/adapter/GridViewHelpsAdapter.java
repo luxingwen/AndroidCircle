@@ -11,6 +11,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.luxin.qimo.R;
 import com.luxin.util.ImageLoader;
 
@@ -70,7 +72,9 @@ public class GridViewHelpsAdapter extends BaseAdapter {
         holder.imageView.setImageResource(R.drawable.pictures_no);
 
         String path=mDatas.get(position).getUrl();
-        ImageLoader.getInstance(3, ImageLoader.Type.LIFO).loaderImage(path,holder.imageView,true);
+       // ImageLoader.getInstance(3, ImageLoader.Type.LIFO).loaderImage(path,holder.imageView,true);
+
+        Glide.with(mContext).load(path).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.imageView);
 
         return convertView;
     }

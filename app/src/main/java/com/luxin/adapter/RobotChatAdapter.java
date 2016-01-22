@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.luxin.bean.MyUser;
 import com.luxin.bean.RobotChat;
 import com.luxin.qimo.R;
@@ -89,7 +91,7 @@ public class RobotChatAdapter extends BaseAdapter {
             holder.userimg.setImageResource(R.drawable.shuaishuai);
         }else {
             if(user.getAuvter()!=null){
-                ImageLoader.getmInstance().loaderImage(Constant.USERIMG+user.getAuvter().getUrl(),holder.userimg,true);
+                Glide.with(mContext).load(Constant.USERIMG+user.getAuvter().getUrl()).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.userimg);
             }
         }
         holder.msg.setText(mData.get(position).getMsg());

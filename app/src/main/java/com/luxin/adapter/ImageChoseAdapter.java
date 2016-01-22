@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.luxin.qimo.R;
 import com.luxin.util.ImageLoader;
 
@@ -67,8 +69,9 @@ public class ImageChoseAdapter extends BaseAdapter {
         holder.mSelect.setImageResource(R.drawable.picture_unselected);
         holder.mImage.setColorFilter(null);
 
-        ImageLoader.getInstance(3, ImageLoader.Type.LIFO).loaderImage(dirPath + "/" + mDatas.get(position), holder.mImage,false);
+        //ImageLoader.getInstance(3, ImageLoader.Type.LIFO).loaderImage(dirPath + "/" + mDatas.get(position), holder.mImage, false);
 
+        Glide.with(mContext).load(dirPath+"/"+mDatas.get(position)).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.mImage);
         final String filePath=dirPath+"/"+mDatas.get(position);
 
         holder.mImage.setOnClickListener(new View.OnClickListener() {

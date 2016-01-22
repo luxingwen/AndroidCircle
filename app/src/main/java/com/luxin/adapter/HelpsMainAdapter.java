@@ -19,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.luxin.bean.Helps;
 import com.luxin.bean.MyUser;
 import com.luxin.bean.PhontoFiles;
@@ -121,11 +123,14 @@ public class HelpsMainAdapter extends BaseAdapter {
             String auvterPath = "http://file.bmob.cn/" + myUser.getAuvter().getUrl();
             //  Log.e(TAG,"===auvter url===="+myUser.getAuvter().getUrl());
 
-            ImageLoader.getInstance(3, ImageLoader.Type.LIFO).loaderImage(auvterPath, holder.userimg, true);
+           // ImageLoader.getInstance(3, ImageLoader.Type.LIFO).loaderImage(auvterPath, holder.userimg, true);
+            Glide.with(mContext).load(auvterPath).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.userimg);
         }
 
         holder.username.setText(myUser.getUsername());
-        holder.personality.setText(myUser.getPersonality());
+        if(myUser.getPersonality()!=null){
+            holder.personality.setText(myUser.getPersonality().toString().length()>16?myUser.getPersonality().substring(0, 22)+"...":myUser.getPersonality().toString());
+        }
         holder.creatTime.setText(getCreateTimes(helps.getCreatedAt()));
 
         SpannableString spannableString=getSpannableString(helps.getContent(),mContext);
@@ -179,7 +184,8 @@ public class HelpsMainAdapter extends BaseAdapter {
             frameLayout.setVisibility(View.VISIBLE);
             gridView.setVisibility(View.GONE);
             contentImg.setVisibility(View.VISIBLE);
-            ImageLoader.getInstance(3, ImageLoader.Type.LIFO).loaderImage(path, contentImg, true);
+           // ImageLoader.getInstance(3, ImageLoader.Type.LIFO).loaderImage(path, contentImg, true);
+            Glide.with(mContext).load(path).diskCacheStrategy(DiskCacheStrategy.ALL).into(contentImg);
             contentImg.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

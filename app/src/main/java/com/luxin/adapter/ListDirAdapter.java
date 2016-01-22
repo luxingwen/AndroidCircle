@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.luxin.bean.FloderBean;
 import com.luxin.qimo.R;
 import com.luxin.util.ImageLoader;
@@ -41,7 +43,8 @@ public class ListDirAdapter extends ArrayAdapter<FloderBean> {
             holder= (ViewHolder) convertView.getTag();
         }
         FloderBean bean=getItem(position);
-        ImageLoader.getInstance(1, ImageLoader.Type.LIFO).loaderImage(bean.getFirsterImagePath(),holder.mImge,false);
+       // ImageLoader.getInstance(1, ImageLoader.Type.LIFO).loaderImage(bean.getFirsterImagePath(),holder.mImge,false);
+        Glide.with(mContext).load(bean.getFirsterImagePath()).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.mImge);
         holder.mDirName.setText(bean.getName());
         holder.mDirCount.setText(bean.getCount()+"");
         return convertView;

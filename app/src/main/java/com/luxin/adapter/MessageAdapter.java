@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.luxin.bean.MyUser;
 import com.luxin.bean.NotifyMsg;
 import com.luxin.qimo.R;
@@ -71,7 +73,8 @@ public class MessageAdapter extends BaseAdapter {
             userimgpath=author.getAuvter().getUrl();
         }
         if(userimgpath!=null){
-            ImageLoader.getmInstance().loaderImage(Constant.USERIMG+userimgpath,holder.userimg,true);
+           // ImageLoader.getmInstance().loaderImage(Constant.USERIMG+userimgpath,holder.userimg,true);
+            Glide.with(mContext).load(Constant.USERIMG+userimgpath).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.userimg);
         }
 
         holder.username.setText(author.getUsername());
